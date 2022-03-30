@@ -12,7 +12,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   void _splashDuration() => Timer(
         const Duration(seconds: 5),
-        () => Get.off(() => const OnBoardingScreen()),
+        () => Get.off(() => OnBoardingScreen()),
       );
 
   @override

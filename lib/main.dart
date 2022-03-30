@@ -14,7 +14,9 @@ class MyApp extends StatelessWidget {
       title: 'Foodie',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: AppColors.kPrimaryColor,
+        // ignore: deprecated_member_use
+        accentColor: AppColors.kPrimaryColor,
         scaffoldBackgroundColor: AppColors.kWhiteColor,
       ),
       home: const SplashScreen(),
