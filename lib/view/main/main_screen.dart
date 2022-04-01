@@ -1,5 +1,4 @@
 import 'package:foodie/utils/exports.dart';
-import 'package:foodie/view/home/home_screen.dart';
 
 class MainScreen extends StatelessWidget {
   MainScreen({Key? key}) : super(key: key);

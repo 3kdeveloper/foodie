@@ -11,7 +11,7 @@ export 'package:water_drop_nav_bar/water_drop_nav_bar.dart';
 export 'package:foodie/view/splash/splash_screen.dart';
 export 'package:foodie/view/onBoarding/on_boarding_screen.dart';
 export 'package:foodie/view/main/main_screen.dart';
-// export 'package:foodie/view/home/home_screen.dart';
+export 'package:foodie/view/home/home_screen.dart';
 export 'package:foodie/view/favorite/favorite_screen.dart';
 
 // Models
@@ -35,10 +35,10 @@ export 'package:foodie/view/onBoarding/components/build_next_button.dart';
 export 'package:foodie/view/onBoarding/components/build_onboarding_body.dart';
 export 'package:foodie/view/onBoarding/components/build_skip_button.dart';
 // Home
-// export 'package:foodie/view/home/components/build_category_tile.dart';
-// export 'package:foodie/view/home/components/build_home_header.dart';
-// export 'package:foodie/view/home/components/build_item_display_card.dart';
-// export 'package:foodie/view/home/components/build_search_field.dart';
+export 'package:foodie/view/home/components/build_category_tile.dart';
+export 'package:foodie/view/home/components/build_home_header.dart';
+export 'package:foodie/view/home/components/build_item_display_card.dart';
+export 'package:foodie/view/home/components/build_search_field.dart';
 
 // Main
 export 'package:foodie/view/main/components/build_bottom_navigation_bar.dart';
