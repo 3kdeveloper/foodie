@@ -1,6 +1,13 @@
 import 'package:foodie/utils/exports.dart';
 
-Widget buildItemDisplayCard() {
+Widget buildItemDisplayCard({
+  int? id,
+  String? imagePath,
+  String? title,
+  String? description,
+  String? ingredients,
+  double? price,
+}) {
   return LayoutBuilder(builder: (context, constraints) {
     return InkWell(
       onTap: () {},
@@ -13,15 +20,15 @@ Widget buildItemDisplayCard() {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Image.asset(
-                  AssetPaths.kHamburger,
+                  imagePath!,
                   height: 70,
                   fit: BoxFit.cover,
                 ),
                 const Spacer(),
-                const Text('Hamburger', style: kDescriptionTextStyle),
+                Text(title!, style: kDescriptionTextStyle),
                 Row(
                   children: [
-                    Text('\$ 22.00',
+                    Text('\$ ${price!.toString()}',
                         style: kDescriptionTextStyle.copyWith(
                           color: AppColors.kPrimaryColor,
                         )),

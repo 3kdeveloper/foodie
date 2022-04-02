@@ -1,5 +1,3 @@
-import 'package:flutter/gestures.dart';
-import 'package:foodie/model/category_title_model.dart';
 import 'package:foodie/utils/exports.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -39,7 +37,7 @@ class HomeScreen extends StatelessWidget {
               ),
               SizedBox(height: Get.height * 0.02),
               GridView.builder(
-                itemCount: 6,
+                itemCount: productData.length,
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 padding: kDefaultPadding,
@@ -49,7 +47,11 @@ class HomeScreen extends StatelessWidget {
                   crossAxisSpacing: 5,
                 ),
                 itemBuilder: (context, index) {
-                  return buildItemDisplayCard();
+                  return buildItemDisplayCard(
+                    imagePath: productData[index].imagePath,
+                    title: productData[index].title,
+                    price: productData[index].price,
+                  );
                 },
               ),
             ],
