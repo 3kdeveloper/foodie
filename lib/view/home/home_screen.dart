@@ -1,4 +1,5 @@
 import 'package:flutter/gestures.dart';
+import 'package:foodie/model/category_title_model.dart';
 import 'package:foodie/utils/exports.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -26,11 +27,14 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: Get.height * 0.06,
                 child: ListView.builder(
-                    itemCount: 9,
+                    itemCount: categoryTileData.length,
                     scrollDirection: Axis.horizontal,
                     padding: kDefaultPadding,
                     itemBuilder: (context, index) {
-                      return buildCategoryTile();
+                      return buildCategoryTile(
+                        imagePath: categoryTileData[index].imagePath,
+                        title: categoryTileData[index].title,
+                      );
                     }),
               ),
               SizedBox(height: Get.height * 0.02),
@@ -41,8 +45,8 @@ class HomeScreen extends StatelessWidget {
                 padding: kDefaultPadding,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 5,
+                  crossAxisSpacing: 5,
                 ),
                 itemBuilder: (context, index) {
                   return buildItemDisplayCard();
