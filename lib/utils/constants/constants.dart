@@ -10,5 +10,5 @@ const kTitleTextStyle = TextStyle(
 );
 const kDescriptionTextStyle = TextStyle(
   fontSize: 16,
-  fontWeight: FontWeight.w700,
+  fontWeight: FontWeight.w400,
 );

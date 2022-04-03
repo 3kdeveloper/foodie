@@ -16,7 +16,7 @@ export 'package:foodie/view/favorite/favorite_screen.dart';
 
 // Models
 export 'package:foodie/model/category_title_model.dart';
-export 'package:foodie/model/item_model.dart';
+export 'package:foodie/model/product_model.dart';
 export 'package:foodie/model/on_boarding_model.dart';
 
 // Controllers

@@ -1,4 +1,5 @@
 import 'package:foodie/utils/exports.dart';
+import 'package:foodie/view/productDetail/product_detail_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -48,10 +49,21 @@ class HomeScreen extends StatelessWidget {
                 ),
                 itemBuilder: (context, index) {
                   return buildItemDisplayCard(
-                    imagePath: productData[index].imagePath,
-                    title: productData[index].title,
-                    price: productData[index].price,
-                  );
+                      imagePath: productData[index].imagePath,
+                      title: productData[index].title,
+                      price: productData[index].price,
+                      onTap: () {
+                        Get.to(
+                          () => ProductDetail(
+                            id: productData[index].id,
+                            imagePath: productData[index].imagePath,
+                            title: productData[index].title,
+                            description: productData[index].description,
+                            ingredients: productData[index].ingredients,
+                            price: productData[index].price,
+                          ),
+                        );
+                      });
                 },
               ),
             ],

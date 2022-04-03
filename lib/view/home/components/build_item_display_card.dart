@@ -7,10 +7,11 @@ Widget buildItemDisplayCard({
   String? description,
   String? ingredients,
   double? price,
+  VoidCallback? onTap,
 }) {
   return LayoutBuilder(builder: (context, constraints) {
     return InkWell(
-      onTap: () {},
+      onTap: onTap,
       child: Card(
           elevation: 5,
           shadowColor: AppColors.kPrimaryColor,
